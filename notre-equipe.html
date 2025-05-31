@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notre Équipe - Waveball Margny</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #F8F9FA;
+      color: #333;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: #FFFFFF;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      color: #FFA500;
+    }
+
+    nav {
+      background-color: #FFA500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    nav img {
+      height: 40px;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    nav a {
+      color: #FFFFFF;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    .equipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .membre {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+    }
+
+    .membre img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      animation: explosion 2s infinite ease-in-out;
+      transform-origin: center;
+    }
+
+    .membre h3 {
+      font-family: 'Oswald', sans-serif;
+      margin-bottom: 5px;
+      color: #007BFF;
+    }
+
+    .membre p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    footer {
+      background-color: #007BFF;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    /* Animation dynamique pour les logos */
+    @keyframes bounceLogo {
+      0%   { transform: translateY(0) scale(1) rotate(0deg); }
+      20%  { transform: translateY(-10px) scale(1.05) rotate(3deg); }
+      40%  { transform: translateY(5px) scale(1.03) rotate(-3deg); }
+      60%  { transform: translateY(-5px) scale(1.04) rotate(2deg); }
+      80%  { transform: translateY(2px) scale(1.02) rotate(-1deg); }
+      100% { transform: translateY(0) scale(1) rotate(0deg); }
+    }
+
+    .logo-anim {
+      animation: bounceLogo 2.5s infinite ease-in-out;
+      display: inline-block;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+
+      .hero {
+        height: 200px;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Images/logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 200px;">
+    <h1>Notre Équipe</h1>
+    <p>Les passionnés derrière le Waveball à Margny</p>
+  </header>
+
+  <nav>
+    <img src="Images/logomargny.png" alt="Logo" class="logo-anim">
+    <a href="waveball.html">Accueil</a>
+    <a href="#equipe">Équipe</a>
+  </nav>
+
+  <section id="equipe">
+    <h2>Rencontrez notre équipe</h2>
+    <div class="equipe-container">
+      <div class="membre">
+        <img src="Images/membre1.jpg" alt="Membre 1">
+        <h3>Augustin Vandame</h3>
+        <p>Défenseur, doyen de l'équipe et créateur du site</p>
+      </div>
+      <div class="membre">
+        <img src="Images/membre2.jpg" alt="Membre 2">
+        <h3>Antoine de Courville</h3>
+        <p>Milieu de l'équipe</p>
+      </div>
+      <div class="membre">
+        <img src="Images/membre3.jpg" alt="Membre 3">
+        <h3>Joseph Merle</h3>
+        <p>Milieu / attaquant</p>
+      </div>
+      <div class="membre">
+        <img src="Images/membre4.jpg" alt="Membre 4">
+        <h3>Pierre Merle</h3>
+        <p>Milieu / attaquant</p>
+      </div>
+      <div class="membre">
+        <img src="Images/membre5.jpg" alt="Membre 5">
+        <h3>Charles Vandame</h3>
+        <p>Défenseur et précurseur du waveball</p>
+      </div>
+      <div class="membre">
+        <img src="Images/membre6.jpg" alt="Membre 6">
+        <h3>Victor Vandame</h3>
+        <p>Défenseur et benjamin de l'équipe</p>
+      </div>
+      <div class="membre">
+        <img src="Images/membre7.jpg" alt="Membre 7">
+        <h3>Côme de Courville</h3>
+        <p>Attaquant</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img src="Images/logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 60px;"><br>
+    <p>&copy; 2025 Waveball Margny Club. Tous droits réservés. Contact :
+      <a href="mailto:waveballmargny@gmail.com" target="_blank" rel="noopener noreferrer">waveballmargny@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
