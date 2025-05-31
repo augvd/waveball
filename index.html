@@ -38,6 +38,7 @@
       justify-content: center;
       flex-wrap: wrap;
       padding: 10px 0;
+      align-items: center;
     }
 
     nav a {
@@ -101,6 +102,20 @@
       margin-top: 40px;
     }
 
+    /* Animation spin */
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Appliquer animation aux logos */
+    header img,
+    nav img,
+    footer img {
+      animation: spin 10s linear infinite;
+      display: inline-block;
+    }
+
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -122,15 +137,14 @@
 </head>
 <body>
 
-  <<header>
-  <img src="logomargny.png" alt="Logo Waveball Margny Club" style="height: 200px;">
-  <h1>Waveball</h1>
-  <p>Le Football Réinventé sur Waveboard</p>
-</header>
-
+  <header>
+    <img src="logomargny.png" alt="Logo Waveball Margny Club" style="height: 200px;">
+    <h1>Waveball</h1>
+    <p>Le Football Réinventé sur Waveboard</p>
+  </header>
 
   <nav>
-	<img src="logomargny.png" alt="Logo" style="height: 40px; margin-right: 15px;">
+    <img src="logomargny.png" alt="Logo" style="height: 40px; margin-right: 15px;">
     <a href="#definition">Définition</a>
     <a href="#waveboard">Waveboard</a>
     <a href="#regles">Règles</a>
@@ -150,7 +164,7 @@
   <section id="waveboard">
     <h2>Qu'est-ce qu'un Waveboard ?</h2>
     <p>Le <strong>waveboard</strong> est une planche à deux roues pivotantes, reliées par une plateforme articulée. Contrairement au skateboard, le waveboard permet une propulsion sans poser le pied au sol, grâce à un mouvement de torsion du corps. Il offre une grande maniabilité et est idéal pour les déplacements fluides et rapides.</p>
-	<img src="Images/waveboard.webp" width="470" alt="texte en cas d’erreur"/><br>
+    <img src="Images/waveboard.webp" width="470" alt="texte en cas d’erreur"/><br>
   </section>
 
   <section id="regles">
@@ -161,8 +175,8 @@
       <li>Objectif : marquer des buts comme au football classique.</li>
       <li>Contact physique limité</li>
       <li>Trois mi-temps de 30 minutes.</li>
-	  <li>Les touches se jouent à la main avec un pied à terre. La balle ne doit pas aller à<br>
-	  plus de 50 cm de hauteur, sinon la touche est retournée à l'équipe adverse</li>
+      <li>Les touches se jouent à la main avec un pied à terre. La balle ne doit pas aller à<br>
+        plus de 50 cm de hauteur, sinon la touche est retournée à l'équipe adverse</li>
     </ul>
   </section>
 
@@ -171,7 +185,7 @@
     <ul>
       <li>Un waveboard par joueur.</li>
       <li>Un ballon de football classique.</li>
-	  <li>Deux petites cages de football ou 4 plots</li>
+      <li>Deux petites cages de football ou 4 plots</li>
     </ul>
   </section>
 
@@ -186,18 +200,18 @@
   </section>
   
   <section id="contact">
-  <h2>Contact</h2>
-  <p>Une question ? Écris-nous à 
-    <a href="mailto:waveballmargny@gmail.com" target="_blank" rel="noopener noreferrer">
-      waveballmargny@gmail.com
-    </a>
-  </p>
-</section>
+    <h2>Contact</h2>
+    <p>Une question ? Écris-nous à 
+      <a href="mailto:waveballmargny@gmail.com" target="_blank" rel="noopener noreferrer">
+        waveballmargny@gmail.com
+      </a>
+    </p>
+  </section>
 
- <footer>
-  <img src="logomargny.png" alt="Logo Waveball Margny Club" style="height: 60px;"><br>
-  <p>&copy; 2025 Waveball Margny Club. Tous droits réservés.</p>
-</footer>
+  <footer>
+    <img src="logomargny.png" alt="Logo Waveball Margny Club" style="height: 60px;"><br>
+    <p>&copy; 2025 Waveball Margny Club. Tous droits réservés.</p>
+  </footer>
 
 </body>
 </html>
