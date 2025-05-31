@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Waveball - Margny-lès-Compiègne</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #F8F9FA;
+      color: #333;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: #FFFFFF;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      color: #FFA500;
+    }
+
+    nav {
+      background-color: #FFA500;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #FFFFFF;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background-image: url('waveball-hero.jpg'); /* Remplacez par votre image */
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.8rem;
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    section p, section ul {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #007BFF;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+
+      .hero {
+        height: 200px;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <<header>
+  <img src="Images/logomargny.png" alt="Logo Waveball Margny Club" style="height: 200px;">
+  <h1>Waveball</h1>
+  <p>Le Football Réinventé sur Waveboard</p>
+</header>
+
+
+  <nav>
+	<img src="Images/logomargny.png" alt="Logo" style="height: 40px; margin-right: 15px;">
+    <a href="#definition">Définition</a>
+    <a href="#waveboard">Waveboard</a>
+    <a href="#regles">Règles</a>
+    <a href="#equipement">Équipement</a>
+    <a href="#avantages">Avantages</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Un nouveau sport alliant équilibre et stratégie</h2>
+  </div>
+
+  <section id="definition">
+    <h2>Qu'est-ce que le Waveball ?</h2>
+    <p>Le <strong>Waveball</strong> est un sport innovant combinant le football avec l'agilité du waveboard. Les joueurs se déplacent sur des waveboards tout en contrôlant un ballon pour marquer des buts. C’est un sport spectaculaire, dynamique et fun qui demande équilibre, stratégie et esprit d’équipe.</p>
+  </section>
+
+  <section id="waveboard">
+    <h2>Qu'est-ce qu'un Waveboard ?</h2>
+    <p>Le <strong>waveboard</strong> est une planche à deux roues pivotantes, reliées par une plateforme articulée. Contrairement au skateboard, le waveboard permet une propulsion sans poser le pied au sol, grâce à un mouvement de torsion du corps. Il offre une grande maniabilité et est idéal pour les déplacements fluides et rapides.</p>
+	<img src="Images/waveboard.png" width="470" alt="texte en cas d’erreur"/><br>
+  </section>
+
+  <section id="regles">
+    <h2>Règles du Jeu</h2>
+    <ul>
+      <li>Deux équipes de 5 joueurs.</li>
+      <li>Chaque joueur doit rester sur son waveboard pendant toute la partie.</li>
+      <li>Objectif : marquer des buts comme au football classique.</li>
+      <li>Contact physique limité</li>
+      <li>Trois mi-temps de 30 minutes.</li>
+	  <li>Les touches se jouent à la main avec un pied à terre. La balle ne doit pas aller à<br>
+	  plus de 50 cm de hauteur, sinon la touche est retournée à l'équipe adverse</li>
+    </ul>
+  </section>
+
+  <section id="equipement">
+    <h2>Équipement Nécessaire</h2>
+    <ul>
+      <li>Un waveboard par joueur.</li>
+      <li>Un ballon de football classique.</li>
+	  <li>Deux petites cages de football ou 4 plots</li>
+    </ul>
+  </section>
+
+  <section id="avantages">
+    <h2>Pourquoi Choisir le Waveball ?</h2>
+    <ul>
+      <li>Un sport original et spectaculaire.</li>
+      <li>Développe l’équilibre, la coordination et l’endurance.</li>
+      <li>Idéal pour les amateurs de glisse et de ballon.</li>
+      <li>Ambiance fun, fair-play et collective.</li>
+    </ul>
+  </section>
+  
+  <section id="contact">
+  <h2>Contact</h2>
+  <p>Une question ? Écris-nous à 
+    <a href="mailto:waveballmargny@gmail.com" target="_blank" rel="noopener noreferrer">
+      waveballmargny@gmail.com
+    </a>
+  </p>
+</section>
+
+ <footer>
+  <img src="Images/logomargny.png" alt="Logo Waveball Margny Club" style="height: 60px;"><br>
+  <p>&copy; 2025 Waveball Margny Club. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
