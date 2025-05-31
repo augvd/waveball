@@ -38,7 +38,6 @@
       justify-content: center;
       flex-wrap: wrap;
       padding: 10px 0;
-      align-items: center;
     }
 
     nav a {
@@ -53,6 +52,7 @@
     }
 
     .hero {
+      background-image: url('waveball-hero.jpg');
       background-size: cover;
       background-position: center;
       height: 400px;
@@ -102,22 +102,18 @@
       margin-top: 40px;
     }
 
-    /* Animation rebond + clignotement */
-    @keyframes bounceBlink {
-      0%, 100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      50% {
-        transform: translateY(-15px);
-        opacity: 0.6;
-      }
+    /* Animation dynamique des logos */
+    @keyframes bounceLogo {
+      0%   { transform: translateY(0) scale(1) rotate(0deg); }
+      20%  { transform: translateY(-10px) scale(1.05) rotate(3deg); }
+      40%  { transform: translateY(5px) scale(1.03) rotate(-3deg); }
+      60%  { transform: translateY(-5px) scale(1.04) rotate(2deg); }
+      80%  { transform: translateY(2px) scale(1.02) rotate(-1deg); }
+      100% { transform: translateY(0) scale(1) rotate(0deg); }
     }
 
-    header img,
-    nav img,
-    footer img {
-      animation: bounceBlink 3s ease-in-out infinite;
+    .logo-anim {
+      animation: bounceLogo 2.5s infinite ease-in-out;
       display: inline-block;
     }
 
@@ -143,19 +139,19 @@
 <body>
 
   <header>
-    <img src="logomargny.png" alt="Logo Waveball Margny Club" style="height: 200px;">
+    <img src="Images/logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 200px;">
     <h1>Waveball</h1>
     <p>Le Football Réinventé sur Waveboard</p>
   </header>
 
   <nav>
-    <img src="logomargny.png" alt="Logo" style="height: 40px; margin-right: 15px;">
+    <img src="Images/logomargny.png" alt="Logo" class="logo-anim" style="height: 40px; margin-right: 15px;">
     <a href="#definition">Définition</a>
     <a href="#waveboard">Waveboard</a>
     <a href="#regles">Règles</a>
     <a href="#equipement">Équipement</a>
     <a href="#avantages">Avantages</a>
-    <a href="notre-equipe.html">Notre équipe</a>
+	<a href="notre-equipe.html">Notre équipe</a>
   </nav>
 
   <div class="hero">
@@ -170,7 +166,7 @@
   <section id="waveboard">
     <h2>Qu'est-ce qu'un Waveboard ?</h2>
     <p>Le <strong>waveboard</strong> est une planche à deux roues pivotantes, reliées par une plateforme articulée. Contrairement au skateboard, le waveboard permet une propulsion sans poser le pied au sol, grâce à un mouvement de torsion du corps. Il offre une grande maniabilité et est idéal pour les déplacements fluides et rapides.</p>
-    <img src="waveboard.webp" width="470" alt="texte en cas d’erreur"/><br>
+    <img src="Images/waveboard.png" width="470" alt="Image de waveboard"/><br>
   </section>
 
   <section id="regles">
@@ -179,10 +175,9 @@
       <li>Deux équipes de 5 joueurs.</li>
       <li>Chaque joueur doit rester sur son waveboard pendant toute la partie.</li>
       <li>Objectif : marquer des buts comme au football classique.</li>
-      <li>Contact physique limité</li>
+      <li>Contact physique limité.</li>
       <li>Trois mi-temps de 30 minutes.</li>
-      <li>Les touches se jouent à la main avec un pied à terre. La balle ne doit pas aller à<br>
-        plus de 50 cm de hauteur, sinon la touche est retournée à l'équipe adverse</li>
+      <li>Les touches se jouent à la main avec un pied à terre. La balle ne doit pas aller à plus de 50 cm de hauteur, sinon la touche est retournée à l'équipe adverse.</li>
     </ul>
   </section>
 
@@ -191,7 +186,7 @@
     <ul>
       <li>Un waveboard par joueur.</li>
       <li>Un ballon de football classique.</li>
-      <li>Deux petites cages de football ou 4 plots</li>
+      <li>Deux petites cages de football ou 4 plots.</li>
     </ul>
   </section>
 
@@ -204,7 +199,7 @@
       <li>Ambiance fun, fair-play et collective.</li>
     </ul>
   </section>
-  
+
   <section id="contact">
     <h2>Contact</h2>
     <p>Une question ? Écris-nous à 
@@ -215,8 +210,10 @@
   </section>
 
   <footer>
-    <img src="logomargny.png" alt="Logo Waveball Margny Club" style="height: 60px;"><br>
-    <p>&copy; 2025 Waveball Margny Club. Tous droits réservés.</p>
+    <img src="Images/logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 60px;"><br>
+    <p>&copy; 2025 Waveball Margny Club. Tous droits réservés. Contact :
+      <a href="mailto:waveballmargny@gmail.com" target="_blank" rel="noopener noreferrer">waveballmargny@gmail.com</a>
+    </p>
   </footer>
 
 </body>
