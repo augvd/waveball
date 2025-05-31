@@ -102,17 +102,22 @@
       margin-top: 40px;
     }
 
-    /* Animation spin */
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    /* Animation rebond + clignotement */
+    @keyframes bounceBlink {
+      0%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-15px);
+        opacity: 0.6;
+      }
     }
 
-    /* Appliquer animation aux logos */
     header img,
     nav img,
     footer img {
-      animation: spin 10s linear infinite;
+      animation: bounceBlink 3s ease-in-out infinite;
       display: inline-block;
     }
 
