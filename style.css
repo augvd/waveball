@@ -5,48 +5,45 @@
   box-sizing: border-box;
 }
 
-/* Base */
+/* Corps général */
 body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-h1, h2, h3 {
-  font-family: 'Oswald', sans-serif;
-  margin-bottom: 0.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
   color: #222;
+  line-height: 1.6;
 }
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
+}
+
+h1, h2, h3 {
+  color: #aa0000;
+  margin-bottom: 1rem;
 }
 
 /* Header */
 header {
-  background-color: #cc0000; /* Rouge Margny */
+  background-color: #aa0000; /* rouge Margny */
   color: white;
   padding: 1rem;
-  position: relative;
+  text-align: center;
 }
 
 .logo img {
   height: 60px;
 }
 
-nav.menu {
-  margin-top: 1rem;
-}
-
 .menu ul {
   list-style: none;
+  padding: 0;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
   flex-wrap: wrap;
-  padding: 0;
+  gap: 1rem;
 }
 
 .menu a {
@@ -55,12 +52,12 @@ nav.menu {
   font-weight: bold;
 }
 
-.menu a.active,
-.menu a:hover {
-  border-bottom: 2px solid #FFD700; /* Jaune doré */
+.menu a:hover,
+.menu a.active {
+  text-decoration: underline;
 }
 
-/* Burger Menu (mobile) */
+/* Burger pour mobile */
 .burger {
   display: none;
   position: absolute;
@@ -78,46 +75,40 @@ main.contenu {
   margin: auto;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-/* Actualités */
 .actualites {
   display: grid;
   gap: 2rem;
 }
 
 .carte-actus {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
 }
 
 .carte-actus:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .texte-actus {
   padding: 1rem;
 }
 
-.texte-actus h2 {
-  font-size: 1.3rem;
+.categorie {
+  font-size: 0.85rem;
+  color: #cc5500;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: inline-block;
 }
 
-.categorie {
-  display: inline-block;
-  font-size: 0.85rem;
-  color: #FFA500;
-  font-weight: bold;
-  margin-bottom: 0.3rem;
+.texte-actus h2 {
+  margin-bottom: 0.5rem;
+  color: #222;
 }
 
 time {
@@ -127,31 +118,9 @@ time {
   margin-bottom: 0.5rem;
 }
 
-/* Équipe / Membre */
-.equipe {
-  display: grid;
-  gap: 2rem;
-}
-
-.carte-membre {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.carte-membre img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #222;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -163,10 +132,6 @@ footer {
   .actualites {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .equipe {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -177,12 +142,11 @@ footer {
   .menu ul {
     display: none;
     flex-direction: column;
-    background-color: #cc0000;
+    background-color: #aa0000;
     position: absolute;
     top: 100%;
     right: 0;
     width: 200px;
-    text-align: right;
     padding: 1rem;
   }
 
