@@ -42,6 +42,71 @@
       padding: 10px 0;
     }
 
+    nav {
+  background-color: #FFA500;
+  padding: 10px 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.burger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #FFA500;
+  }
+
+  .nav-links a {
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
     nav a {
       color: #FFFFFF;
       margin: 0 15px;
@@ -137,6 +202,12 @@
 }
 
   </style>
+	<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+
 </head>
 <body>
 
@@ -147,19 +218,24 @@
   </header>
 
   <nav>
-    <img src="logomargny.png" alt="Logo" class="logo-anim" style="height: 60px; margin: 10px 0;">
-    <a href="#definition">Définition</a>
-    <a href="#waveboard">Waveboard</a>
-    <a href="#regles">Règles</a>
-    <a href="#equipement">Équipement</a>
-    <a href="#avantages">Avantages</a>
-    <a href="#bienfaits">Bienfaits</a>
-    <a href="#rejoins-nous">Rejoins-nous</a>
-    <a href="#contact">Contact</a>
-    <a href="notre-equipe.html">Notre équipe</a>
-    <a href="actus.html">Actualités</a>
+  <div class="nav-container">
+    <img src="logomargny.png" alt="Logo" class="logo-anim" style="height: 60px;">
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#definition">Définition</a>
+      <a href="#waveboard">Waveboard</a>
+      <a href="#regles">Règles</a>
+      <a href="#equipement">Équipement</a>
+      <a href="#avantages">Avantages</a>
+      <a href="#bienfaits">Bienfaits</a>
+      <a href="#rejoins-nous">Rejoins-nous</a>
+      <a href="#contact">Contact</a>
+      <a href="notre-equipe.html">Notre équipe</a>
+      <a href="actus.html">Actualités</a>
+    </div>
+  </div>
+</nav>
 
-  </nav>
 
   <div class="hero">
     <h2>Un nouveau sport alliant équilibre et stratégie</h2>
