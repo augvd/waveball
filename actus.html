@@ -7,30 +7,53 @@
   <meta name="description" content="Suivez toutes les actualités du Waveball à Margny : entraînements, portraits, tournois et plus encore.">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Open Sans', sans-serif;
       background-color: #F8F9FA;
       color: #333;
-      margin: 0;
-      padding: 0;
     }
 
-    header, footer {
+    header {
       background-color: #007BFF;
-      color: white;
+      color: #FFFFFF;
       text-align: center;
-      padding: 20px 10px;
+      padding: 20px 0;
     }
 
     header h1 {
       font-family: 'Oswald', sans-serif;
-      margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
+      color: #FFA500;
+    }
+
+    nav {
+      background-color: #FFA500;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #FFFFFF;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .container {
-      max-width: 900px;
-      margin: 30px auto;
+      max-width: 1000px;
+      margin: 40px auto;
       padding: 0 20px;
     }
 
@@ -39,7 +62,7 @@
       border-left: 5px solid #FFA500;
       padding: 20px;
       margin-bottom: 30px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     }
 
     article h2 {
@@ -53,25 +76,70 @@
       color: gray;
     }
 
+    footer {
+      background-color: #007BFF;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
     footer a {
       color: white;
     }
 
-    a:hover {
+    footer a:hover {
       text-decoration: underline;
+    }
+
+    /* Animation logo */
+    @keyframes bounceLogo {
+      0%   { transform: translateY(0) scale(1) rotate(0deg); }
+      20%  { transform: translateY(-10px) scale(1.05) rotate(3deg); }
+      40%  { transform: translateY(5px) scale(1.03) rotate(-3deg); }
+      60%  { transform: translateY(-5px) scale(1.04) rotate(2deg); }
+      80%  { transform: translateY(2px) scale(1.02) rotate(-1deg); }
+      100% { transform: translateY(0) scale(1) rotate(0deg); }
+    }
+
+    .logo-anim {
+      animation: bounceLogo 2.5s infinite ease-in-out;
+      display: inline-block;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 200px;">
     <h1>Actualités du Waveball</h1>
     <p>Les dernières infos du club de Margny-lès-Compiègne</p>
   </header>
 
+  <nav>
+    <img src="logomargny.png" alt="Logo" class="logo-anim" style="height: 40px; margin-right: 15px;">
+    <a href="index.html#definition">Définition</a>
+    <a href="index.html#waveboard">Waveboard</a>
+    <a href="index.html#regles">Règles</a>
+    <a href="index.html#equipement">Équipement</a>
+    <a href="index.html#avantages">Avantages</a>
+    <a href="index.html">Accueil</a>
+    <a href="notre-equipe.html">Notre équipe</a>
+  </nav>
+
   <div class="container">
     <article>
-      <h2>1er mai 2025 – Premier entraînement à Margny !</h2>
+      <h2> 1er mai 2025 – Premier entraînement à Margny !</h2>
       <time>Publié le 1 juin 2025</time>
       <p>Notre premier entraînement officiel a rassemblé 7 participants motivés ! Merci à tous ceux qui ont découvert le Waveball. Rendez-vous la semaine prochaine pour continuer l’aventure !</p>
     </article>
@@ -83,14 +151,15 @@
     </article>
 
     <article>
-      <h2>En images : les moments forts du premier match test</h2>
+      <h2> En images : les moments forts du premier match test</h2>
       <time>Publié le 25 mai 2025</time>
       <p>Revivez les plus belles actions et sourires lors du match test organisé au gymnase municipal !</p>
     </article>
   </div>
 
   <footer>
-    <p>&copy; 2025 Waveball Margny Club – <a href="index.html">Retour au site</a></p>
+    <img src="logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 60px;"><br>
+    <p>&copy; 2025 Waveball Margny Club – <a href="index.html">Retour à l’accueil</a></p>
   </footer>
 
 </body>
