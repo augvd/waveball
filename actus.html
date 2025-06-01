@@ -1,255 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Actualités Waveball – Margny Club</title>
-  <meta name="description" content="Suivez toutes les actualités du Waveball à Margny : entraînements, portraits, tournois et plus encore.">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #F8F9FA;
-      color: #333;
-    }
-
-    header {
-      background-color: #007BFF;
-      color: #FFFFFF;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    header h1 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 2.5rem;
-      color: #FFA500;
-    }
-
-    nav {
-      background-color: #FFA500;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 10px 0;
-    }
-
-    nav {
-  background-color: #FFA500;
-  padding: 10px 20px;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.nav-links a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-.burger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .burger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-    background-color: #FFA500;
-  }
-
-  .nav-links a {
-    padding: 10px;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-
-    nav a {
-      color: #FFFFFF;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    article {
-      background: white;
-      border-left: 5px solid #FFA500;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-    }
-
-    article h2 {
-      color: #007BFF;
-      font-family: 'Oswald', sans-serif;
-      margin-bottom: 10px;
-    }
-
-    article time {
-      font-size: 0.9rem;
-      color: gray;
-    }
-
-    footer {
-      background-color: #007BFF;
-      color: #FFFFFF;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: white;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Animation logo */
-    @keyframes bounceLogo {
-      0%   { transform: translateY(0) scale(1) rotate(0deg); }
-      20%  { transform: translateY(-10px) scale(1.05) rotate(3deg); }
-      40%  { transform: translateY(5px) scale(1.03) rotate(-3deg); }
-      60%  { transform: translateY(-5px) scale(1.04) rotate(2deg); }
-      80%  { transform: translateY(2px) scale(1.02) rotate(-1deg); }
-      100% { transform: translateY(0) scale(1) rotate(0deg); }
-    }
-
-    .logo-anim {
-      animation: bounceLogo 2.5s infinite ease-in-out;
-      display: inline-block;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-      }
-
-      nav a {
-        margin: 10px 0;
-      }
-    }
-    @media (max-width: 600px) {
-  nav img.logo-anim {
-    height: 60px !important;
-    margin: 10px 0 !important;
-  }
-}
-
-  </style>
-  <script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
-  }
-</script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waveball - Actualités</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <header>
-    <img src="logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 200px;">
-    <h1>Actualités du Waveball</h1>
-    <p>Les dernières infos du club de Margny-lès-Compiègne</p>
+    <div class="logo">
+      <img src="Images/logo_waveball.png" alt="Logo de Waveball" />
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="actus.html" class="active">Actualités</a></li>
+        <li><a href="notre-equipe.html">Notre équipe</a></li>
+      </ul>
+    </nav>
+    <div class="burger">&#9776;</div>
   </header>
 
- <nav>
-  <div class="nav-container">
-    <img src="logomargny.png" alt="Logo" class="logo-anim" style="height: 60px;">
-    <button class="burger" onclick="toggleMenu()">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html#definition">Définition</a>
-      <a href="index.html#waveboard">Waveboard</a>
-      <a href="index.html#regles">Règles</a>
-      <a href="index.html#equipement">Équipement</a>
-      <a href="index.html#avantages">Avantages</a>
-      <a href="index.html#bienfaits">Bienfaits</a>
-      <a href="index.html#rejoins-nous">Rejoins-nous</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="notre-equipe.html">Notre équipe</a>
-      <a href="actus.html">Actualités</a>
-    </div>
-  </div>
-</nav>
+  <main class="contenu">
+    <h1>Actualités de Waveball</h1>
 
+    <section class="actualites">
+      <article class="carte-actus" data-type="entrainement">
+        <img src="Images/entrainement1.jpg" alt="Entraînement de l'équipe sur le terrain" loading="lazy" />
+        <div class="texte-actus">
+          <h2>Entraînement intense avant le tournoi !</h2>
+          <span class="categorie">🏋️ Entraînement</span>
+          <time datetime="2025-05-20">20 mai 2025</time>
+          <p>Notre dernière session s’est déroulée au complexe sportif de Margny. Une belle démonstration de motivation collective !</p>
+        </div>
+      </article>
 
-  <div class="container">
-    <article>
-      <h2> 1er mai 2025 – Premier entraînement à Margny !</h2>
-      <time>Publié le 1 juin 2025</time>
-      <p>Notre premier entraînement officiel a rassemblé 7 participants motivés ! Merci à tous ceux qui ont découvert le Waveball. Rendez-vous la semaine prochaine pour continuer l’aventure !</p>
-    </article>
+      <article class="carte-actus" data-type="portrait">
+        <img src="Images/portrait_marie.jpg" alt="Portrait de Marie, une joueuse phare" loading="lazy" />
+        <div class="texte-actus">
+          <h2>Portrait de Marie, notre étoile montante</h2>
+          <span class="categorie">🌟 Portrait</span>
+          <time datetime="2025-05-18">18 mai 2025</time>
+          <p>À seulement 16 ans, Marie impressionne par sa technique et son énergie. Rencontre avec cette future championne.</p>
+        </div>
+      </article>
 
-    <article>
-      <h2> Portrait de joueur : Charles, pionnier du Waveball</h2> 
-      <time>Publié le 28 mai 2025</time>
-      <p>À seulement 13 ans, Charles est l’un des tout premiers à croire au Waveball : “Ce que j’adore, c’est l’intensité et la créativité dans les mouvements”.</p>
-    </article>
-
-    <article>
-      <h2> En images : les moments forts du premier match test</h2>
-      <time>Publié le 25 mai 2025</time>
-      <p>Revivez les plus belles actions et sourires lors du match test organisé au gymnase municipal !</p>
-    </article>
-  </div>
+      <article class="carte-actus" data-type="resultats">
+        <img src="Images/resultats_match.jpg" alt="Score du dernier match affiché sur tableau" loading="lazy" />
+        <div class="texte-actus">
+          <h2>Victoire 6-4 contre l’équipe de Compiègne</h2>
+          <span class="categorie">🏆 Résultats</span>
+          <time datetime="2025-05-15">15 mai 2025</time>
+          <p>Un match haletant conclu par une belle victoire. Bravo à tous les joueurs !</p>
+        </div>
+      </article>
+    </section>
+  </main>
 
   <footer>
-    <img src="logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 60px;"><br>
-    <p>&copy; 2025 Waveball Margny Club. Tous droits réservés. Contact :
-      <a href="mailto:waveballmargny@gmail.com" target="_blank" rel="noopener noreferrer">waveballmargny@gmail.com</a>
-    </p>
+    <p>&copy; 2025 Waveball Margny-lès-Compiègne. Tous droits réservés.</p>
   </footer>
 
+  <script src="burger.js"></script>
 </body>
 </html>
