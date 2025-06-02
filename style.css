@@ -1,61 +1,64 @@
-/* style.css */
+/* style.css - cohérent avec index.html Waveball */
 
-/* Réinitialisation des marges et paddings */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Open+Sans&display=swap');
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Corps de la page */
+/* BODY */
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #F8F9FA;
+  background-color: #f2f2f2;
   color: #333;
 }
 
-/* En-tête */
+/* HEADER */
 header {
-  background-color: #007BFF;
-  color: #FFFFFF;
+  background-color: #007bff;
+  color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 1.5rem 1rem;
 }
 
 header h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
-  color: #FFA500;
+  color: #ffa500;
 }
 
 header p {
-  font-size: 1rem;
-  margin-top: 10px;
+  margin-top: 0.5rem;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav {
-  background-color: #FFA500;
-  padding: 10px 20px;
-}
-
-.nav-container {
+  background-color: #ffa500;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
 
+.logo-anim {
+  height: 60px;
+  animation: bounceLogo 2.5s infinite ease-in-out;
+}
+
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  gap: 1rem;
 }
 
 .nav-links a {
-  color: #FFFFFF;
+  color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -71,25 +74,26 @@ nav {
   cursor: pointer;
 }
 
-/* Contenu principal */
+/* MAIN CONTAINER */
 .container {
   max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
+/* ARTICLES */
 article {
   background: white;
-  border-left: 5px solid #FFA500;
-  padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border-left: 6px solid #ffa500;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
 }
 
 article h2 {
-  color: #007BFF;
+  color: #007bff;
   font-family: 'Oswald', sans-serif;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 article time {
@@ -97,13 +101,12 @@ article time {
   color: gray;
 }
 
-/* Pied de page */
+/* FOOTER */
 footer {
-  background-color: #007BFF;
-  color: #FFFFFF;
+  background-color: #007bff;
+  color: white;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
+  padding: 1.5rem 1rem;
 }
 
 footer a {
@@ -114,7 +117,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Animation du logo */
+/* LOGO ANIMATION */
 @keyframes bounceLogo {
   0%   { transform: translateY(0) scale(1) rotate(0deg); }
   20%  { transform: translateY(-10px) scale(1.05) rotate(3deg); }
@@ -124,12 +127,7 @@ footer a:hover {
   100% { transform: translateY(0) scale(1) rotate(0deg); }
 }
 
-.logo-anim {
-  animation: bounceLogo 2.5s infinite ease-in-out;
-  display: inline-block;
-}
-
-/* Responsivité */
+/* RESPONSIVE NAV */
 @media (max-width: 768px) {
   .burger {
     display: block;
@@ -139,35 +137,15 @@ footer a:hover {
     display: none;
     flex-direction: column;
     width: 100%;
-    margin-top: 10px;
-    background-color: #FFA500;
+    margin-top: 0.5rem;
+    background-color: #ffa500;
   }
 
   .nav-links a {
-    padding: 10px;
+    padding: 0.75rem 1rem;
   }
 
   .nav-links.show {
     display: flex;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-  }
-
-  nav a {
-    margin: 10px 0;
-  }
-
-  nav img.logo-anim {
-    height: 60px !important;
-    margin: 10px 0 !important;
   }
 }
