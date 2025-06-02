@@ -1,102 +1,163 @@
-/* ---------- GÉNÉRAL ---------- */
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@700&display=swap');
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #f2f2f2;
-  color: #222;
+  background-color: #f0f8ff;
+  color: #001f3f;
 }
 
-h1, h2 {
-  font-family: 'Oswald', sans-serif;
-  color: #005baa; /* bleu */
-  margin-bottom: 0.5em;
-}
-
-a {
-  color: #f76c0e; /* orange */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- HEADER ---------- */
 header {
   text-align: center;
-  background: linear-gradient(to bottom, #005baa, #007edb);
+  background-color: #001f3f;
   color: white;
   padding: 1em 0;
-  position: relative;
-}
-
-header h1 {
-  font-size: 2.5em;
-  margin: 0.3em 0 0.1em;
-}
-
-header p {
-  margin: 0;
-  font-style: italic;
 }
 
 .logo-anim {
-  animation: pulse 2s infinite alternate;
-  transition: transform 0.3s;
+  animation: rotation 4s infinite linear;
 }
 
-@keyframes pulse {
-  from { transform: scale(1); }
-  to { transform: scale(1.05); }
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* ---------- NAVIGATION ---------- */
 nav {
-  background-color: #003b73;
+  background-color: #001f3f;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0.5em 1em;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .nav-links {
   display: flex;
+  flex-grow: 1;
+  justify-content: center;
   gap: 1em;
+  font-family: 'Oswald', sans-serif;
   flex-wrap: wrap;
 }
 
 .nav-links a {
   color: white;
+  text-decoration: none;
   font-weight: bold;
-  padding: 0.5em;
-  border-radius: 5px;
+  padding: 0.5em 1em;
+  transition: background 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  background-color: #f76c0e;
-  color: white;
+  background-color: #ff851b;
+  border-radius: 5px;
+}
+
+.nav-links .contact-link {
+  margin-left: auto;
 }
 
 .burger {
-  font-size: 1.8em;
+  display: none;
+  font-size: 2em;
+  color: white;
   background: none;
   border: none;
-  color: white;
   cursor: pointer;
-  display: none;
+  margin-left: auto;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+.hero {
+  background-color: #0074D9;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+section {
+  padding: 2em;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #001f3f;
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+footer {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+footer a {
+  color: #ff851b;
+  text-decoration: none;
+}
+
+.contenu {
+  padding: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Cartes actus / membres */
+.actualites, .equipe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.carte-actus, .membre {
+  background-color: white;
+  border: 2px solid #001f3f;
+  border-radius: 10px;
+  padding: 1em;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carte-actus:hover, .membre:hover {
+  transform: scale(1.05);
+}
+
+.carte-actus img, .membre img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.texte-actus h2 {
+  color: #001f3f;
+  font-size: 1.2em;
+}
+
+.categorie {
+  font-weight: bold;
+  color: #ff851b;
+}
+
+@media screen and (max-width: 768px) {
   .nav-links {
-    flex-direction: column;
     display: none;
+    flex-direction: column;
     width: 100%;
+    background-color: #001f3f;
   }
 
   .nav-links.show {
@@ -106,97 +167,8 @@ nav {
   .burger {
     display: block;
   }
-}
 
-/* ---------- CONTENU PRINCIPAL ---------- */
-main.contenu {
-  padding: 2em;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.hero {
-  background: url('Images/waveball-action.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 3em 1em;
-  font-size: 1.5em;
-}
-
-/* ---------- ACTUALITÉS ---------- */
-.actualites {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  justify-content: center;
-}
-
-.carte-actus {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  max-width: 300px;
-  transition: transform 0.3s;
-}
-
-.carte-actus:hover {
-  transform: translateY(-5px);
-}
-
-.carte-actus img {
-  width: 100%;
-  height: auto;
-}
-
-.texte-actus {
-  padding: 1em;
-}
-
-.categorie {
-  font-size: 0.9em;
-  color: #f76c0e;
-  font-weight: bold;
-}
-
-/* ---------- ÉQUIPE ---------- */
-.equipe {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  justify-content: center;
-  margin-top: 2em;
-}
-
-.membre {
-  background: white;
-  padding: 1em;
-  border-radius: 12px;
-  max-width: 280px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.membre img {
-  width: 100%;
-  border-radius: 8px;
-  height: auto;
-}
-
-/* ---------- SECTIONS ---------- */
-section {
-  margin-bottom: 3em;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-  background-color: #003b73;
-  color: white;
-  text-align: center;
-  padding: 2em 1em;
-  font-size: 0.9em;
-}
-
-footer a {
-  color: #f76c0e;
+  .nav-links .contact-link {
+    margin-left: 0;
+  }
 }
