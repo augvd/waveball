@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+  <script>
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 <body>
   <header>
     <div class="logo">
