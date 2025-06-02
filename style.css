@@ -49,7 +49,7 @@ header p {
 
 /* Navigation */
 nav {
-  background-color: #ff851b;
+  background-color: #e35f0f;
   padding: 0.5em 1em;
 }
 
@@ -58,10 +58,6 @@ nav {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.nav-container .logo-anim {
-  margin-right: auto;
 }
 
 .burger {
@@ -150,7 +146,7 @@ li {
 
 .categorie {
   display: inline-block;
-  background-color: #ff851b;
+  background-color: #e35f0f;
   color: white;
   padding: 0.2em 0.5em;
   border-radius: 4px;
@@ -179,7 +175,7 @@ li {
 
 .section-contact a,
 #contact.section-contact a {
-  color: #ff851b;
+  color: #e35f0f;
   text-decoration: none;
   font-weight: bold;
 }
@@ -194,7 +190,7 @@ footer {
 }
 
 footer a {
-  color: #ff851b;
+  color: #e35f0f;
   text-decoration: none;
 }
 
