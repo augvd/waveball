@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<ht<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -6,29 +7,33 @@
   <title>Waveball - Actualités</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Open+Sans&display=swap" rel="stylesheet">
-</head>
-  <script>
-  const burger = document.querySelector('.burger');
-  const navLinks = document.querySelector('.nav-links');
-  burger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-</script>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+</head>
 <body>
+
   <header>
-    <div class="logo">
-      <img src="logomargny.png" alt="Logo de Waveball" />
-    </div>
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="actus.html" class="active">Actualités</a></li>
-        <li><a href="notre-equipe.html">Notre équipe</a></li>
-      </ul>
-    </nav>
-    <div class="burger">&#9776;</div>
+    <img src="logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 200px;">
+    <h1>Waveball</h1>
+    <p>Le Football Réinventé sur Waveboard</p>
   </header>
+
+  <nav>
+    <div class="nav-container">
+      <img src="logomargny.png" alt="Logo" class="logo-anim" style="height: 60px;">
+      <button class="burger" onclick="toggleMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Accueil</a>
+        <a href="actus.html" class="active">Actualités</a>
+        <a href="notre-equipe.html">Notre équipe</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
   <main class="contenu">
     <h1>Actualités de Waveball</h1>
@@ -66,10 +71,21 @@
     </section>
   </main>
 
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Une question ? Écris-nous à 
+      <a href="mailto:waveballmargny@gmail.com" target="_blank" rel="noopener noreferrer">
+        waveballmargny@gmail.com
+      </a>
+    </p>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Waveball Margny-lès-Compiègne. Tous droits réservés.</p>
+    <img src="logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 60px;"><br>
+    <p>&copy; 2025 Waveball Margny Club. Tous droits réservés. Contact :
+      <a href="mailto:waveballmargny@gmail.com" target="_blank" rel="noopener noreferrer">waveballmargny@gmail.com</a>
+    </p>
   </footer>
 
-  <script src="burger.js"></script>
 </body>
 </html>
