@@ -1,13 +1,12 @@
-/* Import des polices */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@700&display=swap');
-
+/* Polices */
 body {
-  margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #f0f8ff;
-  color: #001f3f;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
+/* En-tête */
 header {
   text-align: center;
   background-color: #001f3f;
@@ -15,93 +14,183 @@ header {
   padding: 1em 0;
 }
 
+header h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+  margin: 0.2em 0;
+}
+
+header p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Logo animé */
 .logo-anim {
-  animation: rotation 4s infinite linear;
+  animation: bounce 2s infinite;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
 }
 
-@keyframes rotation {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.logo-anim:hover {
+  opacity: 1;
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.6;
+  }
+}
+
+/* Navigation */
 nav {
-  background-color: #001f3f;
+  background-color: #ff851b;
+  padding: 0.5em 1em;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5em 1em;
   flex-wrap: wrap;
-  position: relative;
+}
+
+.nav-container .logo-anim {
+  margin-right: auto;
+}
+
+.burger {
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #001f3f;
+  margin-left: auto;
 }
 
 .nav-links {
   display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  gap: 1em;
-  font-family: 'Oswald', sans-serif;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5em;
 }
 
 .nav-links a {
-  color: white;
+  margin: 0.5em;
   text-decoration: none;
+  color: #001f3f;
   font-weight: bold;
-  padding: 0.5em 1em;
-  transition: background 0.3s ease;
+  padding: 0.3em 0.7em;
+  border-radius: 8px;
+  transition: background 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  background-color: #ff851b;
-  border-radius: 5px;
-}
-
-.nav-links .contact-link {
-  margin-left: auto;
-}
-
-.burger {
-  display: none;
-  font-size: 2em;
+  background-color: #001f3f;
   color: white;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: auto;
 }
 
+/* Hero section */
 .hero {
-  background-color: #0074D9;
+  background: linear-gradient(to right, #001f3f, #003366);
   color: white;
-  padding: 2em;
   text-align: center;
+  padding: 2em;
 }
 
+/* Sections */
 section {
   padding: 2em;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
-h1, h2 {
+section h2 {
+  color: #001f3f;
   font-family: 'Oswald', sans-serif;
+}
+
+/* Listes */
+ul {
+  padding-left: 1.2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Cartes de l'équipe ou actualités */
+.carte-actus,
+.membre {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 1em 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carte-actus img,
+.membre img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.texte-actus,
+.membre {
+  padding: 1em;
+}
+
+.categorie {
+  display: inline-block;
+  background-color: #ff851b;
+  color: white;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+/* Section Contact stylée et centrée */
+.section-contact,
+#contact.section-contact {
+  background-color: #fefefe;
+  border-top: 2px solid #001f3f;
+  padding: 2em 1em;
+  max-width: 700px;
+  margin: 2em auto 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  text-align: center;
+  transform: translateX(5%);
+}
+
+.section-contact h2,
+#contact.section-contact h2 {
   color: #001f3f;
 }
 
-ul {
-  padding-left: 1.5em;
+.section-contact a,
+#contact.section-contact a {
+  color: #ff851b;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+/* Footer */
 footer {
-  background-color: #001f3f;
-  color: white;
   text-align: center;
   padding: 1em;
-  margin-top: 2em;
+  background-color: #001f3f;
+  color: white;
+  font-size: 0.9em;
 }
 
 footer a {
@@ -109,66 +198,31 @@ footer a {
   text-decoration: none;
 }
 
-.contenu {
-  padding: 2em;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* Cartes actus / membres */
-.actualites, .equipe {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  justify-content: center;
-}
-
-.carte-actus, .membre {
-  background-color: white;
-  border: 2px solid #001f3f;
-  border-radius: 10px;
-  padding: 1em;
-  max-width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.carte-actus:hover, .membre:hover {
-  transform: scale(1.05);
-}
-
-.carte-actus img, .membre img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.texte-actus h2 {
-  color: #001f3f;
-  font-size: 1.2em;
-}
-
-.categorie {
-  font-weight: bold;
-  color: #ff851b;
-}
-
-@media screen and (max-width: 768px) {
+/* Responsive */
+@media screen and (min-width: 700px) {
   .nav-links {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .burger {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #001f3f;
   }
 
   .nav-links.show {
     display: flex;
   }
+}
 
-  .burger {
-    display: block;
+@media screen and (max-width: 699px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
   }
 
-  .nav-links .contact-link {
-    margin-left: 0;
+  .nav-links.show {
+    display: flex;
   }
 }
