@@ -2,84 +2,92 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Notre Équipe - Waveball Margny</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waveball - Notre équipe</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Open+Sans&display=swap" rel="stylesheet">
   <script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
-  }
-</script>
-
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
 </head>
 <body>
 
   <header>
     <img src="logomargny.png" alt="Logo Waveball Margny Club" class="logo-anim" style="height: 200px;">
-    <h1>Notre Équipe</h1>
-    <p>Les passionnés derrière le Waveball à Margny</p>
+    <h1>Waveball</h1>
+    <p>Le Football Réinventé sur Waveboard</p>
   </header>
 
   <nav>
-  <div class="nav-container">
-    <img src="logomargny.png" alt="Logo" class="logo-anim" style="height: 60px;">
-    <button class="burger" onclick="toggleMenu()">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html#definition">Définition</a>
-      <a href="index.html#waveboard">Waveboard</a>
-      <a href="index.html#regles">Règles</a>
-      <a href="index.html#equipement">Équipement</a>
-      <a href="index.html#avantages">Avantages</a>
-      <a href="index.html#bienfaits">Bienfaits</a>
-      <a href="index.html#rejoins-nous">Rejoins-nous</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="notre-equipe.html">Notre équipe</a>
-      <a href="actus.html">Actualités</a>
+    <div class="nav-container">
+      <img src="logomargny.png" alt="Logo" class="logo-anim" style="height: 60px;">
+      <button class="burger" onclick="toggleMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Accueil</a>
+        <a href="actus.html">Actualités</a>
+        <a href="notre-equipe.html" class="active">Notre équipe</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-  <section id="equipe">
-    <h2>Rencontrez notre équipe</h2>
-    <div class="equipe-container">
-      <div class="membre">
-        <img src="Images/membre1.jpg" alt="Membre 1">
-        <h3>Augustin Vandame</h3>
+  <main class="contenu">
+    <h1>Notre équipe</h1>
+
+    <section class="equipe">
+      <article class="membre">
+        <img src="Images/augustin.jpg" alt="Portrait d'Augustin Vandame" loading="lazy">
+        <h2>Augustin Vandame</h2>
         <p>Défenseur, doyen de l'équipe et créateur du site</p>
-      </div>
-      <div class="membre">
-        <img src="Images/membre2.jpg" alt="Membre 2">
-        <h3>Antoine de Courville</h3>
+      </article>
+
+      <article class="membre">
+        <img src="Images/antoine.jpg" alt="Portrait d'Antoine de Courville" loading="lazy">
+        <h2>Antoine de Courville</h2>
         <p>Milieu de l'équipe</p>
-      </div>
-      <div class="membre">
-        <img src="Images/membre3.jpg" alt="Membre 3">
-        <h3>Joseph Merle</h3>
+      </article>
+
+      <article class="membre">
+        <img src="Images/joseph.jpg" alt="Portrait de Joseph Merle" loading="lazy">
+        <h2>Joseph Merle</h2>
         <p>Milieu / attaquant</p>
-      </div>
-      <div class="membre">
-        <img src="Images/membre4.jpg" alt="Membre 4">
-        <h3>Pierre Merle</h3>
+      </article>
+
+      <article class="membre">
+        <img src="Images/pierre.jpg" alt="Portrait de Pierre Merle" loading="lazy">
+        <h2>Pierre Merle</h2>
         <p>Milieu / attaquant</p>
-      </div>
-      <div class="membre">
-        <img src="Images/membre5.jpg" alt="Membre 5">
-        <h3>Charles Vandame</h3>
+      </article>
+
+      <article class="membre">
+        <img src="Images/charles.jpg" alt="Portrait de Charles Vandame" loading="lazy">
+        <h2>Charles Vandame</h2>
         <p>Défenseur et précurseur du waveball</p>
-      </div>
-      <div class="membre">
-        <img src="Images/membre6.jpg" alt="Membre 6">
-        <h3>Victor Vandame</h3>
+      </article>
+
+      <article class="membre">
+        <img src="Images/victor.jpg" alt="Portrait de Victor Vandame" loading="lazy">
+        <h2>Victor Vandame</h2>
         <p>Défenseur et benjamin de l'équipe</p>
-      </div>
-      <div class="membre">
-        <img src="Images/membre7.jpg" alt="Membre 7">
-        <h3>Côme de Courville</h3>
+      </article>
+
+      <article class="membre">
+        <img src="Images/come.jpg" alt="Portrait de Côme de Courville" loading="lazy">
+        <h2>Côme de Courville</h2>
         <p>Attaquant</p>
-      </div>
-    </div>
+      </article>
+    </section>
+  </main>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Une question ? Écris-nous à 
+      <a href="mailto:waveballmargny@gmail.com" target="_blank" rel="noopener noreferrer">
+        waveballmargny@gmail.com
+      </a>
+    </p>
   </section>
 
   <footer>
