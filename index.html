@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Waveball – Le nouveau sport collectif dynamique</title>
-  <meta name="description" content="Découvrez le Waveball, un sport collectif fun et innovant, entre football waveboard et stratégie ! Rejoignez notre communauté.">
-  <meta name="keywords" content="Waveball, nouveau sport collectif, sport fun 2025, sport innovant, Waveball club, sport Margny-lès-Compiègne">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@700&display=swap">
-  <link rel="stylesheet" href="style.css">
-
-  
-	<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
-  }
-</script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waveball - Accueil</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Open+Sans&display=swap" rel="stylesheet">
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
 </head>
 <body>
 
@@ -26,86 +21,49 @@
   </header>
 
   <nav>
-  <div class="nav-container">
-    <img src="logomargny.png" alt="Logo" class="logo-anim" style="height: 60px;">
-    <button class="burger" onclick="toggleMenu()">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="#definition">Définition</a>
-      <a href="#waveboard">Waveboard</a>
-      <a href="#regles">Règles</a>
-      <a href="#equipement">Équipement</a>
-      <a href="#avantages">Avantages</a>
-      <a href="#bienfaits">Bienfaits</a>
-      <a href="#rejoins-nous">Rejoins-nous</a>
-      <a href="#contact">Contact</a>
-      <a href="notre-equipe.html">Notre équipe</a>
-      <a href="actus.html">Actualités</a>
+    <div class="nav-container">
+      <img src="logomargny.png" alt="Logo" class="logo-anim" style="height: 60px;">
+      <button class="burger" onclick="toggleMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="actus.html">Actualités</a>
+        <a href="notre-equipe.html">Notre équipe</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
+  <main class="contenu">
+    <section class="presentation">
+      <h2>Qu'est-ce que le Waveball ?</h2>
+      <p>Le Waveball est un sport collectif qui fusionne les sensations de la glisse urbaine et l'intensité du football. Il se pratique sur une surface lisse à l'aide d'un waveboard (aussi appelé caster board), et oppose deux équipes qui tentent de marquer des buts tout en gardant l'équilibre !</p>
+    </section>
 
-  <div class="hero">
-    <h2>Un nouveau sport alliant équilibre et stratégie</h2>
-  </div>
+    <section class="waveboard">
+      <h2>Le Waveboard</h2>
+      <p>Le waveboard est une planche articulée composée de deux plates-formes reliées par une barre de torsion. Chaque plateau repose sur une seule roue pivotante, ce qui permet une propulsion par mouvement de balancier, sans avoir besoin de pousser au sol. C’est l’élément clé du Waveball.</p>
+      <img src="Images/waveboard.jpg" alt="Waveboard" style="max-width: 100%; height: auto;">
+    </section>
 
-  <section id="definition">
-    <h2>Qu'est-ce que le Waveball ?</h2>
-    <p>Le <strong>Waveball</strong> est un sport innovant combinant le football avec l'agilité du waveboard. Les joueurs se déplacent sur des waveboards tout en contrôlant un ballon pour marquer des buts. C’est un sport spectaculaire, dynamique et fun qui demande équilibre, stratégie et esprit d’équipe.</p>
-  </section>
+    <section class="terrain">
+      <h2>Le Terrain</h2>
+      <p>Le terrain est un espace rectangulaire (comme une salle de sport ou une cour lisse) avec deux cages de but. Les matchs se jouent en deux équipes de 3 à 5 joueurs, avec des règles adaptées à la glisse : pas de tacles, priorité à l’agilité et au jeu collectif.</p>
+    </section>
 
-  <section id="waveboard">
-    <h2>Qu'est-ce qu'un Waveboard ?</h2>
-    <p>Le <strong>waveboard</strong> est une planche à deux roues pivotantes, reliées par une plateforme articulée. Contrairement au skateboard, le waveboard permet une propulsion sans poser le pied au sol, grâce à un mouvement de torsion du corps. Il offre une grande maniabilité et est idéal pour les déplacements fluides et rapides.</p>
-    <img src="waveboard.webp" width="470" alt="Image de waveboard"/><br>
-  </section>
+    <section class="valeurs">
+      <h2>Nos Valeurs</h2>
+      <ul>
+        <li><strong>Esprit d'équipe :</strong> la coopération est la clé pour faire circuler la balle sur un waveboard !</li>
+        <li><strong>Créativité :</strong> chaque joueur développe son style de jeu et ses figures pour impressionner l’adversaire.</li>
+        <li><strong>Respect :</strong> des autres, du matériel et du terrain.</li>
+        <li><strong>Mixité :</strong> un sport où filles et garçons jouent ensemble à tous les niveaux.</li>
+      </ul>
+    </section>
+  </main>
 
-  <section id="regles">
-    <h2>Règles du Jeu</h2>
-    <ul>
-      <li>Deux équipes de 5 joueurs.</li>
-      <li>Chaque joueur doit rester sur son waveboard pendant toute la partie.</li>
-      <li>Objectif : marquer des buts comme au football classique.</li>
-      <li>Contact physique limité.</li>
-      <li>Trois mi-temps de 30 minutes.</li>
-      <li>Les touches se jouent à la main avec un pied à terre. La balle ne doit pas aller à plus de 50 cm de hauteur, sinon la touche est retournée à l'équipe adverse.</li>
-    </ul>
-  </section>
-
-  <section id="equipement">
-    <h2>Équipement Nécessaire</h2>
-    <ul>
-      <li>Un waveboard par joueur.</li>
-      <li>Un ballon de football classique.</li>
-      <li>Deux petites cages de football ou 4 plots.</li>
-    </ul>
-  </section>
-
-
-  <section id="bienfaits">
-  <h2>Les bienfaits du Waveball</h2>
-  <p>Le Waveball développe la coordination, l’agilité, la stratégie collective et la cohésion d’équipe. C’est aussi un excellent moyen de se dépenser tout en s’amusant, accessible à tous les niveaux.</p>
-</section>
-
-  <section id="avantages">
-    <h2>Pourquoi choisir le Waveball ?</h2>
-    <ul>
-      <li>Un sport original et spectaculaire.</li>
-      <li>Développe l’équilibre, la coordination et l’endurance.</li>
-      <li>Idéal pour les amateurs de glisse et de ballon.</li>
-      <li>Ambiance fun, fair-play et collective.</li>
-    </ul>
-  </section>
-
-<section id="rejoins-nous">
-  <h2>Rejoignez la communauté Waveball</h2>
-  <p>Vous cherchez un <strong>nouveau sport collectif</strong> ? Un <strong>sport fun en 2025</strong> ? Rejoignez le <strong>club Waveball de Margny-lès-Compiègne</strong> ! Entraînements réguliers, matchs, tournois, et ambiance conviviale garantie.</p>
-</section>
-  
-	
-<section id="contact">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Une question ? Écris-nous à 
+    <p>Une question ? Écris-nous à
       <a href="mailto:waveballmargny@gmail.com" target="_blank" rel="noopener noreferrer">
         waveballmargny@gmail.com
       </a>
