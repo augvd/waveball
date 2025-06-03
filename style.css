@@ -25,11 +25,6 @@ header p {
   font-style: italic;
 }
 
-.titre-page {
-  margin-left: 5%;
-  color: #001f3f;
-  font-family: 'Oswald', sans-serif;
-}
 
 
 /* Logo animé */
@@ -229,3 +224,12 @@ footer a {
     display: flex;
   }
 }
+
+.titre-page {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: #001f3f;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
