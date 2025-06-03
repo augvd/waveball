@@ -25,6 +25,13 @@ header p {
   font-style: italic;
 }
 
+.titre-page {
+  margin-left: 5%;
+  color: #001f3f;
+  font-family: 'Oswald', sans-serif;
+}
+
+
 /* Logo animé */
 .logo-anim {
   animation: bounce 2s infinite;
