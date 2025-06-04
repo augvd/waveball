@@ -234,8 +234,8 @@ footer a {
 }
 
 .membre img {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   object-fit: cover; /* recadre proprement les images */
   border-radius: 10px; /* arrondit les coins (facultatif) */
 }
