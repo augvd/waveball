@@ -25,8 +25,6 @@ header p {
   font-style: italic;
 }
 
-
-
 /* Logo animé */
 .logo-anim {
   animation: bounce 2s infinite;
@@ -233,11 +231,14 @@ footer a {
   margin-top: 2rem;
 }
 
+/* ====== MODIFICATIONS POUR CENTRER LES IMAGES MEMBRES ====== */
 .membre img {
+  display: block;       /* Ajouté pour centrer */
+  margin: 0 auto;       /* Ajouté pour centrer */
   width: 100px;
   height: 100px;
-  object-fit: cover; /* recadre proprement les images */
-  border-radius: 10px; /* arrondit les coins (facultatif) */
+  object-fit: cover;    /* recadre proprement les images */
+  border-radius: 10px;  /* arrondit les coins (facultatif) */
 }
 
 .equipe {
@@ -249,4 +250,9 @@ footer a {
 
 .membre {
   text-align: center;
+}
+
+/* ====== AJOUT POUR EVITER QUE LE HAUT SOIT MASQUE ====== */
+main.contenu {
+  padding-top: 80px; /* ajuste selon la hauteur réelle de ton header + nav */
 }
