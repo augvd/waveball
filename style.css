@@ -240,3 +240,13 @@ footer a {
   border-radius: 10px; /* arrondit les coins (facultatif) */
 }
 
+.equipe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  padding: 2em;
+}
+
+.membre {
+  text-align: center;
+}
